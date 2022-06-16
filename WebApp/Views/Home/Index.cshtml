@@ -1,0 +1,35 @@
+﻿@model WebApp.Models.ResultViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+<form class="form" asp-area="" asp-controller="Home" asp-action="Index">
+     
+    
+    <div class="text-center">
+        <label class="text-center" for="name"><b>Name</b></label>
+        <input class="text" type="text" id="name" name="myName"/>
+    </div>
+    <div class="text-center">
+         <label class="text-center" for="age"><b>Age</b></label>
+         <input class="text" type="text" id="age" name="myAge"/>
+     </div>
+    <div class="text-center">
+     <label class="text-center" for="name"><b>CNIC</b></label>
+        <input class="text" type="text" id="cnic" name="myCNIC"/>
+    </div>
+    <div class="text-center"><input class="btn btn-dark" type="submit" value="Save"/> </div>
+</form>
+</div>
+@if(Model != null)
+{
+    <div class="text-center">@Model.Name</div>
+    <div class="text-center">@Model.Age Years</div>
+    <div class="text-center">@Model.CNIC</div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
